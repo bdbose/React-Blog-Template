@@ -1,0 +1,255 @@
+.modal {
+  display: bloack;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal-container {
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    background: white;
+    // overflow: hidden;
+    width: 50vw;
+    @media screen and(max-width:800px) {
+      width: 100%;
+      bottom: 0;
+      margin-top: auto;
+      border-radius: 8px 8px 0 0;
+    }
+    .cross {
+      border-radius: 50%;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      top: -40px;
+      right: -10px;
+      cursor: pointer;
+      @media screen and(max-width:800px) {
+        right: 20px;
+        top: 20px;
+        background: grey;
+      }
+    }
+    .modal-header {
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: #008a45;
+      background: #effff4;
+      border-radius: 8px 8px 0px 0;
+      @media screen and(max-width:800px) {
+        display: none;
+      }
+    }
+    .login-form-wrapper {
+      padding: 24px 36px;
+      display: flex;
+      @media screen and(max-width:800px) {
+        padding: 22px 20px;
+      }
+      form {
+        width: 100%;
+      }
+      h1 {
+        font-family: IBM Plex Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 31px;
+        color: #000000;
+        margin-bottom: 24px;
+        @media screen and(max-width:800px) {
+          font-size: 18px;
+          line-height: 23px;
+        }
+      }
+      .form-left {
+        width: 50%;
+        @media screen and(max-width:800px) {
+          width: 100%;
+        }
+        .mob-policy {
+          display: none;
+
+          @media screen and(max-width:800px) {
+            display: block;
+            font-family: IBM Plex Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 16px;
+            width: 70%;
+            margin: auto;
+            margin-top: 22px;
+            text-align: center;
+            letter-spacing: -0.008em;
+
+            color: #212529;
+          }
+        }
+        a {
+          display: none;
+
+          @media screen and(max-width:800px) {
+            display: block;
+            text-decoration: none;
+            color: #495057;
+          }
+        }
+        .form-btn-wrapper {
+          @media screen and(max-width:800px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+        .social-btns {
+          background: #ffffff;
+          border: 0.6px solid #d9d9db;
+          box-sizing: border-box;
+          border-radius: 2px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 11px 0;
+          margin-bottom: 8px;
+          @media screen and(max-width:800px) {
+            font-size: 13px;
+            line-height: 16px;
+          }
+          svg {
+            margin-right: 10px;
+          }
+        }
+        button {
+          width: 100%;
+          background: #2f6ce5;
+          border-radius: 20px;
+          margin: 19px 0;
+          padding: 12px 0;
+          font-family: IBM Plex Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          color: #ffffff;
+          outline: none;
+          border: 0;
+          cursor: pointer;
+          @media screen and(max-width:800px) {
+            font-size: 13px;
+            line-height: 16px;
+            width: 50%;
+          }
+        }
+        div {
+          display: flex;
+        }
+        .name-input {
+          flex: 1;
+          display: flex;
+          input {
+            width: 50%;
+            margin: 0;
+            padding: 15px 0;
+            padding-left: 12px;
+            background: #f7f8fa;
+            border: 1px solid #d9d9db;
+            box-sizing: border-box;
+            border-radius: 2px 2px 0px 0px;
+          }
+        }
+        input {
+          flex: 1;
+          border: 0;
+          margin: 0;
+          outline: none;
+          padding: 15px 0;
+          padding-left: 12px;
+          background: #f7f8fa;
+          border: 1px solid #d9d9db;
+          border-radius: 2px 2px 0px 0px;
+          font-family: IBM Plex Sans;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 16px;
+          /* identical to box height, or 107% */
+
+          color: #8a8a8a;
+          @media screen and(max-width:800px) {
+            font-size: 13px;
+            line-height: 16px;
+          }
+        }
+      }
+      .form-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and(max-width:800px) {
+          display: none;
+        }
+        svg {
+          margin: auto;
+        }
+        h3 {
+          font-family: IBM Plex Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 17px;
+          /* identical to box height */
+
+          text-align: right;
+
+          color: #3d3d3d;
+          a {
+            margin-left: 4px;
+            font-weight: 600;
+            text-decoration: none;
+          }
+        }
+        h5 {
+          font-family: IBM Plex Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 11px;
+          line-height: 16px;
+          /* identical to box height, or 145% */
+
+          text-align: right;
+          letter-spacing: -0.008em;
+
+          color: #000000;
+
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

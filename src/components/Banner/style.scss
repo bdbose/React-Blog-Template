@@ -1,0 +1,71 @@
+.banner-wrapper {
+  background-image: url('https://i.ibb.co/rcMGJxK/Group-1719.png');
+  height: 440px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and(max-width:850px) {
+    height: 236px;
+  }
+  .mobile-options {
+    display: none;
+    button {
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 6px 8px;
+      background: none;
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      /* identical to box height */
+
+      color: #ffffff;
+    }
+    @media screen and(max-width:850px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% - 8.8%);
+      padding: 0 4.4%;
+      padding-top: 16px;
+    }
+  }
+  .banner-container {
+    padding-top: 286px;
+    padding-left: 13.8%;
+    @media screen and(max-width:850px) {
+      padding-top: 122px;
+      padding-left: 4.4%;
+    }
+  }
+  h1 {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+    color: #ffffff;
+    margin-bottom: 4px;
+    @media screen and(max-width:850px) {
+      font-size: 17px;
+      line-height: 22px;
+    }
+  }
+  h3 {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #ffffff;
+
+    @media screen and(max-width:850px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

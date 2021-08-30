@@ -1,0 +1,206 @@
+.cards-wrapper {
+  width: 45vw;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  @media screen and(max-width:800px) {
+    width: 100%;
+    border: 0;
+  }
+  & > div {
+    padding: 20px;
+    @media screen and(max-width:800px) {
+      padding: 16px;
+    }
+  }
+  .event-active {
+    margin-top: 16px;
+    background: #ffffff;
+    padding: 10px 0;
+    border: 1px dashed #a9aeb8;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 140.4%;
+    /* or 18px */
+
+    text-align: center;
+
+    color: #e56135;
+    @media screen and(max-width:800px) {
+      font-size: 13px;
+      line-height: 140.4%;
+      border: 1.5px dashed #a9aeb8;
+    }
+  }
+  .card-event {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    @media screen and(max-width:800px) {
+      width: 90%;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 19px;
+      color: #000000;
+      @media screen and(max-width:800px) {
+        font-size: 12px;
+        line-height: 16px;
+
+        letter-spacing: -0.01em;
+      }
+      svg {
+        margin-right: 4px;
+      }
+    }
+  }
+  h2 {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    @media screen and(max-width:800px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    @media screen and(max-width:850px) {
+      height: 120px;
+    }
+  }
+  .card-detail {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+
+    span {
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 134.17%;
+      color: #000000;
+      width: 90%;
+      @media screen and(max-width:850px) {
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+  }
+  .menu-btn {
+    display: flex;
+    border: 0;
+    outline: none;
+    background: white;
+    border-radius: 4px;
+    padding: 10px 5px;
+    height: fit-content;
+    cursor: pointer;
+    &:hover {
+      background: #bfc0c0;
+    }
+  }
+  h3 {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 134.17%;
+    white-space: nowrap;
+    margin-top: 12px;
+    color: #5c5c5c;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media screen and(max-width:850px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  .profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+
+    .post-options {
+      display: flex;
+      align-items: center;
+
+      button {
+        outline: none;
+        border: 0;
+        background: #edeef0;
+        border-radius: 2px;
+        width: 42px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      span {
+        svg {
+          margin-right: 8px;
+        }
+        margin-right: 40px;
+        font-family: IBM Plex Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+
+        color: #525252;
+        @media screen and(max-width:800px) {
+          display: none;
+        }
+      }
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+      span {
+        font-family: IBM Plex Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        /* identical to box height */
+
+        color: #000000;
+        @media screen and(max-width:800px) {
+          font-size: 13px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}
