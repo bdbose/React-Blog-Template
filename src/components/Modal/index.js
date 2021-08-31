@@ -1,13 +1,15 @@
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ReactComponent as Fb } from '../../assets/fb.svg';
 import { ReactComponent as Google } from '../../assets/google.svg';
 import { ReactComponent as Banner } from '../../assets/signin.svg';
 import { ReactComponent as Cross } from '../../assets/cross.svg';
 import './style.scss';
+import { Context } from '../../store';
 
 const Modal = ({ open, setOpen }) => {
+  const { dispatch } = useContext(Context);
   useEffect(() => {
     if (document.getElementById('myModal')) {
       let modal = document.getElementById('myModal');
@@ -87,7 +89,14 @@ const Modal = ({ open, setOpen }) => {
                   ) : (
                     <>
                       <h1>Sign In</h1>
-                      <form>
+                      <form
+                        onSubmit={(e) => {
+                          e.preventDefault();
+                          dispatch({
+                            type: 'SET_USER',
+                          });
+                          setOpen(false);
+                        }}>
                         <div>
                           <input placeholder='Email' />
                         </div>

@@ -6,6 +6,7 @@ import { ReactComponent as Share } from '../../assets/share.svg';
 import { ReactComponent as Eye } from '../../assets/eye.svg';
 import { ReactComponent as Calender } from '../../assets/calender.svg';
 import { ReactComponent as Location } from '../../assets/location.svg';
+import { ReactComponent as Suitcase } from '../../assets/job.svg';
 
 const Cards = ({
   type,
@@ -30,6 +31,11 @@ const Cards = ({
             <button className='menu-btn'>
               <Menu />
             </button>
+            <div className='menu-options'>
+              <span>Edit</span>
+              <span>Report</span>
+              <span>Option 3</span>
+            </div>
           </div>
         )}
         {desc && <h3>{desc}</h3>}
@@ -37,7 +43,7 @@ const Cards = ({
         {(event || job) && (
           <div className='card-event'>
             <div>
-              <Calender />
+              {event ? <Calender /> : <Suitcase />}
               <span>{event ? event.date : job.company}</span>
             </div>
             <div>
@@ -59,15 +65,23 @@ const Cards = ({
         <div className='profile-wrapper'>
           <div className='profile'>
             <img src={profileImg} alt='' />
-            <span>{name}</span>
+            <div>
+              <span>{name}</span>
+              <h6>{views} views</h6>
+            </div>
           </div>
           <div className='post-options'>
-            <span>
+            <span
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}>
               <Eye />
               {views} views
             </span>
             <button>
               <Share />
+              <span className='share-mob'>Share</span>
             </button>
           </div>
         </div>

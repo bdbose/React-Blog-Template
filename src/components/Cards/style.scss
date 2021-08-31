@@ -5,7 +5,7 @@
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 16px;
-  @media screen and(max-width:800px) {
+  @media screen and(max-width:850px) {
     width: 100%;
     border: 0;
   }
@@ -13,6 +13,31 @@
     padding: 20px;
     @media screen and(max-width:800px) {
       padding: 16px;
+    }
+  }
+  .menu-options {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16), 0px 0px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+
+    width: 160px;
+    span {
+      font-family: IBM Plex Sans;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-size: 14px !important;
+      line-height: 18px !important;
+      padding: 11px 12px;
+      color: #000000;
+      cursor: pointer;
+    }
+    right: 0;
+    top: 20px;
+    &:hover {
+      display: flex;
     }
   }
   .event-active {
@@ -93,7 +118,7 @@
     display: flex;
     margin-top: 10px;
     justify-content: space-between;
-
+    position: relative;
     span {
       font-family: IBM Plex Sans;
       font-style: normal;
@@ -119,6 +144,9 @@
     cursor: pointer;
     &:hover {
       background: #bfc0c0;
+      & + .menu-options {
+        display: flex;
+      }
     }
   }
   h3 {
@@ -158,6 +186,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and(max-width:800px) {
+          width: 70px;
+          display: flex;
+          align-items: center;
+          svg {
+            margin-right: 4px;
+          }
+        }
       }
       span {
         svg {
@@ -187,6 +223,20 @@
         object-fit: cover;
         margin-right: 10px;
       }
+      h6 {
+        display: none;
+        @media screen and(max-width:800px) {
+          display: block;
+          font-family: IBM Plex Sans;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          /* identical to box height */
+
+          color: #495057;
+        }
+      }
       span {
         font-family: IBM Plex Sans;
         font-style: normal;
@@ -201,6 +251,21 @@
           line-height: 17px;
         }
       }
+    }
+  }
+  .share-mob {
+    display: none;
+    @media screen and(max-width:800px) {
+      display: block !important;
+      margin: 0 !important;
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      /* identical to box height */
+
+      color: #212529;
     }
   }
 }

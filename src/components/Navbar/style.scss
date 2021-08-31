@@ -25,14 +25,17 @@
       margin-left: 16px;
       margin-right: 16px;
     }
-    span {
+    input {
       font-family: IBM Plex Sans;
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: 18px;
-
+      width: 100%;
       color: #5c5c5c;
+      border: 0;
+      outline: 0;
+      background: 0;
     }
   }
   .more-wrapper {
@@ -53,6 +56,13 @@
     }
     svg {
       margin-left: 5px;
+    }
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 12px;
     }
   }
 }

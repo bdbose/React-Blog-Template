@@ -1,0 +1,44 @@
+.recomm-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+    object-fit: cover;
+  }
+  span {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    color: #000000;
+  }
+  button {
+    background: #edeef0;
+    border-radius: 14px;
+    border: 0;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    padding: 4px 12px;
+    color: #000000;
+    cursor: pointer;
+  }
+  .active {
+    background: #c3c3c4;
+  }
+}
