@@ -142,7 +142,7 @@ function App() {
       <div className='posts-wrapper'>
         <div className='posts-container'>
           {Data.map((i) => (
-            <Cards {...i} />
+            <Cards key={i.type} {...i} />
           ))}
         </div>
 
@@ -167,7 +167,7 @@ function App() {
                 <Thumb /> Recommended Groups
               </h2>
               {Recomm.map((i) => {
-                return <RecommCard {...i} />;
+                return <RecommCard key={i.name} {...i} />;
               })}
               <a href='/'>Show More...</a>
             </div>

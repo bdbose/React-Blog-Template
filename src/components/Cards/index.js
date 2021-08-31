@@ -71,11 +71,7 @@ const Cards = ({
             </div>
           </div>
           <div className='post-options'>
-            <span
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-              }}>
+            <span className='views'>
               <Eye />
               {views} views
             </span>
